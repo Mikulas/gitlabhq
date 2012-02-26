@@ -12,14 +12,14 @@
       Path
     .input
       .input-prepend
-        %span.add-on= "git@#{GIT_HOST["host"]}:"
+        %span.add-on= "git@#{GIT_HOST["host_git"]}:"
         = f.text_field :path, :placeholder => "example_project", :disabled => !@project.new_record?
   .clearfix
     = f.label :code do 
       Code
     .input
       .input-prepend
-        %span.add-on= "http://#{GIT_HOST["host"]}/"
+        %span.add-on= "http://#{GIT_HOST["host_www"]}/"
         = f.text_field :code, :placeholder => "example"
 
   - unless @project.new_record? || @project.heads.empty?  

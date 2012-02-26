@@ -12,9 +12,9 @@ module Gitlabhq
 
     def self.url_to_repo(path)
       if !GIT_HOST["port"] or GIT_HOST["port"] == 22
-        "#{GIT_HOST["git_user"]}@#{GIT_HOST["host"]}:#{path}.git"
+        "#{GIT_HOST["git_user"]}@#{GIT_HOST["host_git"]}:#{path}.git"
       else
-        "ssh://#{GIT_HOST["git_user"]}@#{GIT_HOST["host"]}:#{GIT_HOST["port"]}/#{path}.git"
+        "ssh://#{GIT_HOST["git_user"]}@#{GIT_HOST["host_git"]}:#{GIT_HOST["port"]}/#{path}.git"
       end
     end
   end

@@ -11,7 +11,8 @@ git_host:
   system: gitolite
   admin_uri: git@localhost:gitolite-admin
   base_path: /home/git/repositories/
-  host: localhost
+  host_git: localhost
+  host_www: localhost
   git_user: git
   # port: 22
 

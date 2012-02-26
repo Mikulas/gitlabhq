@@ -119,7 +119,7 @@ class Project < ActiveRecord::Base
         id: commit.id,
         message: commit.safe_message,
         timestamp: commit.date.xmlschema,
-        url: "http://#{GIT_HOST['host']}/#{code}/commits/#{commit.id}",
+        url: "http://#{GIT_HOST['host_www']}/#{code}/commits/#{commit.id}",
         author: {
           name: commit.author_name,
           email: commit.author_email
